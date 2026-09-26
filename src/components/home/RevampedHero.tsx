@@ -248,7 +248,7 @@ export function RevampedHero() {
 
               {/* Bottom Card Footer */}
               <div className="p-3 bg-black/50 border-t border-white/10 rounded-b-xl flex items-center justify-between text-xs text-zinc-400">
-                <span className="font-mono">Mizaan Technologies · Vaniyambadi HQ</span>
+                <span className="font-mono">Mizaan Technologies</span>
                 <Link to="/services" className="text-[#e65c58] hover:underline flex items-center gap-1 font-medium">
                   <span>Explore Capabilities</span>
                   <ChevronRight size={13} />
