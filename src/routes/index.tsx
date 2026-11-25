@@ -193,27 +193,6 @@ function Index() {
         {/* Revamped Hero Section */}
         <RevampedHero />
 
-        {/* Tech Stack Marquee Strip */}
-        <section className="py-8 bg-[#0a0c11] border-b border-white/10 overflow-hidden">
-          <div className="shell">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold shrink-0">
-                Core Engineering Stack:
-              </div>
-              <div className="flex flex-wrap items-center gap-2.5 justify-center md:justify-end">
-                {techStackBadges.map((badge) => (
-                  <span
-                    key={badge}
-                    className="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-zinc-300 hover:border-[#c73834]/50 hover:text-white transition-colors"
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Services Showcase Section */}
         <section className="py-24 bg-[#08090d] border-b border-white/10" id="services">
           <div className="shell">
