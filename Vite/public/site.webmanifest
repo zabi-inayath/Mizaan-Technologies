@@ -1,0 +1,22 @@
+{
+  "name": "Mizaan Technologies",
+  "short_name": "Mizaan",
+  "description": "Custom software, website development, mobile applications, ERP systems, POS solutions, and intelligent AI automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090d",
+  "theme_color": "#08090d",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

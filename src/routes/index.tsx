@@ -37,28 +37,29 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Mizaan Technologies | AI & Custom Software Company in Vaniyambadi" },
+      { title: "Mizaan Technologies | Custom Software, Web, Mobile, ERP & AI Automation" },
       {
         name: "description",
         content:
-          "Mizaan Technologies is a premium technology solutions provider specializing in AI-driven SaaS platforms, custom software development, and scalable web applications.",
+          "Mizaan Technologies builds custom software, high-performance websites, mobile apps, ERP & CRM systems, POS platforms, e-commerce stores, and intelligent AI automation.",
       },
-      { property: "og:title", content: "Mizaan Technologies | AI & Custom Software Company in Vaniyambadi" },
+      { property: "og:title", content: "Mizaan Technologies | Custom Software, Web, Mobile, ERP & AI Automation" },
       {
         property: "og:description",
         content:
-          "Mizaan Technologies is a premium technology solutions provider specializing in AI-driven SaaS platforms, custom software development, and scalable web applications.",
+          "We solve business problems through website development, custom software, mobile apps, ERP & POS systems, and super intelligent automation.",
       },
       { property: "og:url", content: "https://mizaantech.co.in/" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://mizaantech.co.in/assets/mizaan-hero.jpg" },
+      { property: "og:image", content: "https://mizaantech.co.in/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Mizaan Technologies | AI & Custom Software Company in Vaniyambadi" },
+      { name: "twitter:title", content: "Mizaan Technologies | Custom Software, Web, Mobile, ERP & AI Automation" },
       {
         name: "twitter:description",
         content:
-          "Mizaan Technologies is a premium technology solutions provider specializing in AI-driven SaaS platforms, custom software development, and scalable web applications.",
+          "We solve business problems through website development, custom software, mobile apps, ERP & POS systems, and super intelligent automation.",
       },
+      { name: "twitter:image", content: "https://mizaantech.co.in/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://mizaantech.co.in/" }],
   }),
