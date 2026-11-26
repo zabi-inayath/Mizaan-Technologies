@@ -46,7 +46,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0b0d12]/85 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/20 py-3.5"
+          ? "glass-nav py-3.5"
           : "bg-transparent py-5"
       }`}
     >
@@ -61,7 +61,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-sm" aria-label="Main Navigation">
+        <nav className="hidden md:flex items-center gap-1.5 p-1 rounded-full glass-nav-pills" aria-label="Main Navigation">
           {navItems.map((item) => {
             const active = isActive(item.to);
             return (
@@ -70,8 +70,8 @@ export function Navbar() {
                 to={item.to}
                 className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
                   active
-                    ? "text-white bg-[#c73834] shadow-sm shadow-[#c73834]/40"
-                    : "text-zinc-300 hover:text-white hover:bg-white/[0.06]"
+                    ? "text-white bg-gradient-to-b from-[#d9433f] to-[#b82e2b] border border-white/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_4px_14px_rgba(199,56,52,0.4)]"
+                    : "text-zinc-300 hover:text-white hover:bg-white/[0.08]"
                 }`}
               >
                 {item.label}
@@ -84,7 +84,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             to="/contact"
-            className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#c73834] to-[#a82522] hover:from-[#d9433f] hover:to-[#b82e2b] shadow-md shadow-[#c73834]/25 transition-all duration-300 hover:shadow-lg hover:shadow-[#c73834]/35 hover:-translate-y-0.5 active:translate-y-0"
+            className="glass-btn-primary group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Start a Project</span>
             <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -95,7 +95,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden flex items-center justify-center p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none"
+          className="glass-btn md:hidden flex items-center justify-center p-2.5 rounded-xl text-zinc-200 hover:text-white transition-all focus:outline-none"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
         >
@@ -105,7 +105,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[65px] bg-[#0c0e14]/98 border-b border-white/10 backdrop-blur-xl p-6 shadow-2xl transition-all animate-in slide-in-from-top duration-200">
+        <div className="md:hidden fixed inset-x-0 top-[65px] glass-mobile-drawer p-6 shadow-2xl transition-all animate-in slide-in-from-top duration-200">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => {
               const active = isActive(item.to);
@@ -130,7 +130,7 @@ export function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-[#c73834] shadow-md shadow-[#c73834]/30"
+                className="glass-btn-primary w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white"
               >
                 <Sparkles size={16} />
                 <span>Start a Project</span>

@@ -120,7 +120,7 @@ function ProjectsPage() {
         <PageHeader kicker="Portfolio & Case Studies" title="Digital Products Engineered for" highlightedWord="Measurable Impact." description="Explore our track record of transforming challenging technical problems into scalable web applications, mobile platforms, and automated intelligence." breadcrumbCurrent="Projects"/>
 
         {/* Filter Bar */}
-        <section className="py-8 bg-[#0a0c11] border-b  sticky top-[60px] md:top-[70px] z-30 backdrop-blur-md bg-[#0a0c11]/90">
+        <section className="glass-nav py-8 sticky top-[60px] md:top-[70px] z-30">
           <div className="shell flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-2">
               {[
@@ -151,10 +151,10 @@ function ProjectsPage() {
             {filteredProjects.map((project, idx) => (<div key={project.id} className="glass-card p-8 md:p-12 rounded-3xl hover:border-[#c73834]/40 transition-all duration-300 shadow-xl">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* Media Column */}
-                  <div className="lg:col-span-5 relative rounded-2xl overflow-hidden border  shadow-lg group">
+                  <div className="glass-media lg:col-span-5 relative rounded-2xl overflow-hidden shadow-lg group">
                     <img src={project.image} alt={project.title} className="w-full h-[280px] sm:h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"/>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"/>
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#0c0e14]/90 border  text-[11px] font-mono text-zinc-300 backdrop-blur-md">
+                    <div className="glass-chip absolute top-4 left-4 px-3 py-1 rounded-full bg-black/45 text-[11px] font-mono text-zinc-200">
                       {project.categoryLabel}
                     </div>
                   </div>

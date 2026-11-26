@@ -33,7 +33,7 @@ export function PageHeader({
         </nav>
 
         {/* Kicker badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#e65c58] bg-[#c73834]/15 border border-[#c73834]/30 mb-6">
+        <div className="glass-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#e65c58] bg-[#c73834]/15 border-[#c73834]/30 mb-6">
           <span>{kicker}</span>
         </div>
 

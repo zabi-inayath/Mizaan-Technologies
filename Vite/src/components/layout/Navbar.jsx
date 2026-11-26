@@ -45,8 +45,8 @@ export function Navbar() {
           {navItems.map((item) => {
             const active = isActive(item.to);
             return (<Link key={item.to} to={item.to} className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${active
-                    ? "text-white bg-[#c73834] shadow-sm shadow-[#c73834]/40"
-                    : "text-zinc-300 hover:text-white hover:bg-white/[0.06]"}`}>
+                    ? "text-white bg-gradient-to-b from-[#d9433f] to-[#b82e2b] border border-white/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_4px_14px_rgba(199,56,52,0.4)]"
+                    : "text-zinc-300 hover:text-white hover:bg-white/[0.08]"}`}>
                 {item.label}
               </Link>);
         })}
@@ -61,7 +61,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden flex items-center justify-center p-2 rounded-lg text-zinc-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none" aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
+        <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="glass-btn md:hidden flex items-center justify-center p-2.5 rounded-xl text-zinc-200 hover:text-white transition-all focus:outline-none" aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
           {mobileMenuOpen ? <X size={24}/> : <Menu size={24}/>}
         </button>
       </div>

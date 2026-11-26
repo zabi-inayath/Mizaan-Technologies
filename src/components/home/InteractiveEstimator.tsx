@@ -79,7 +79,7 @@ export function InteractiveEstimator() {
     <section className="py-24 bg-[#0a0c11] text-white relative overflow-hidden border-t border-b border-white/10">
       <div className="shell relative z-10">
         <div className="max-w-2xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border border-[#c73834]/30 mb-3">
+          <div className="glass-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border-[#c73834]/30 mb-3">
             <Calculator size={13} />
             <span>Interactive Planner</span>
           </div>
@@ -106,10 +106,10 @@ export function InteractiveEstimator() {
                       type="button"
                       key={type.id}
                       onClick={() => setSelectedType(type)}
-                      className={`p-4 rounded-2xl text-left border transition-all ${
+                      className={`p-4 rounded-2xl text-left transition-all ${
                         isSelected
-                          ? "bg-[#c73834]/20 border-[#c73834] text-white shadow-lg shadow-[#c73834]/20"
-                          : "bg-white/[0.03] border-white/10 text-zinc-300 hover:border-white/20"
+                          ? "glass bg-[#c73834]/20 border-[#c73834]/75 text-white shadow-lg shadow-[#c73834]/20"
+                          : "glass text-zinc-300"
                       }`}
                     >
                       <div className="font-semibold text-sm mb-1">{type.name}</div>
@@ -132,10 +132,10 @@ export function InteractiveEstimator() {
                       type="button"
                       key={addon.id}
                       onClick={() => toggleAddon(addon.id)}
-                      className={`w-full p-3.5 rounded-xl border flex items-center justify-between text-left transition-all ${
+                      className={`w-full p-3.5 rounded-xl flex items-center justify-between text-left transition-all ${
                         isChecked
-                          ? "bg-white/[0.08] border-white/30 text-white"
-                          : "bg-white/[0.02] border-white/10 text-zinc-400 hover:text-white"
+                          ? "glass bg-white/[0.09] border-white/30 text-white"
+                          : "glass text-zinc-400 hover:text-white"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -160,7 +160,7 @@ export function InteractiveEstimator() {
 
           {/* Results Summary Box */}
           <div className="lg:col-span-5 sticky top-28">
-            <div className="p-8 rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/15 backdrop-blur-xl shadow-2xl space-y-6">
+            <div className="glass-panel p-8 rounded-3xl shadow-2xl space-y-6">
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <span className="text-xs font-mono uppercase text-zinc-400 tracking-wider">
                   Engineering Forecast
@@ -208,7 +208,7 @@ export function InteractiveEstimator() {
 
               <Link
                 to="/contact"
-                className="w-full flex items-center justify-center gap-2.5 py-4 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#c73834] to-[#a82522] hover:from-[#d9433f] hover:to-[#b82e2b] shadow-lg shadow-[#c73834]/30 transition-all hover:scale-[1.02] active:scale-100"
+                className="glass-btn-primary w-full flex items-center justify-center gap-2.5 py-4 rounded-full text-sm font-semibold text-white transition-all hover:scale-[1.02] active:scale-100"
               >
                 <span>Lock In This Scope & Schedule Call</span>
                 <ArrowRight size={16} />

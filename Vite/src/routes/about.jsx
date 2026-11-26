@@ -97,10 +97,10 @@ function AboutPage() {
 
               {/* Office Image with Floating Location Badge */}
               <div className="lg:col-span-6">
-                <div className="relative rounded-3xl overflow-hidden border  shadow-2xl group">
+                <div className="glass-card relative rounded-3xl overflow-hidden shadow-2xl group">
                   <img src={officeImage} alt="Mizaan Technologies studio office in Vaniyambadi" className="w-full h-[450px] md:h-[550px] object-cover transition-transform duration-700 group-hover:scale-105"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"/>
-                  <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-[#090b0f]/85 border  backdrop-blur-md flex items-center justify-between">
+                  <div className="glass absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/45 flex items-center justify-between">
                     <div>
                       <div className="text-xs font-mono text-[#e65c58] font-bold uppercase tracking-wider">
                         Engineering Headquarters

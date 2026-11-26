@@ -39,7 +39,7 @@ function TermsPage() {
         <section className="py-20 bg-[#0a0c11]">
           <div className="shell max-w-4xl mx-auto space-y-12">
             {/* Meta summary card */}
-            <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-zinc-400">
+            <div className="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-zinc-400">
               <div>
                 <span className="text-zinc-200 font-semibold">Last Updated:</span> September 2026
               </div>
@@ -75,7 +75,7 @@ function TermsPage() {
 
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold font-display text-white">3. Intellectual Property Rights & Ownership</h2>
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3">
+                <div className="glass-card p-6 rounded-2xl space-y-3">
                   <div className="font-semibold text-white flex items-center gap-2">
                     <FileCode2 size={18} className="text-[#e65c58]" />
                     <span>Complete Client Ownership upon Settlement</span>

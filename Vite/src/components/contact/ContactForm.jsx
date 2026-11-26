@@ -57,7 +57,7 @@ export function ContactForm() {
         }, 900);
     };
     if (submitted) {
-        return (<div className="p-8 md:p-12 rounded-3xl bg-white/[0.03] border border-emerald-500/30 text-center space-y-5 animate-in fade-in zoom-in duration-300">
+        return (<div className="glass-card p-8 md:p-12 rounded-3xl border-emerald-500/30 text-center space-y-5 animate-in fade-in zoom-in duration-300">
         <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center border border-emerald-500/30">
           <CheckCircle2 size={32}/>
         </div>
@@ -67,7 +67,7 @@ export function ContactForm() {
         <p className="text-zinc-300 max-w-md mx-auto text-sm leading-relaxed">
           Thank you, <span className="font-semibold text-white">{fullName}</span>. Our lead engineering team at Mizaan Technologies has received your project briefing. We will review your requirements and respond within 24 hours.
         </p>
-        <div className="p-4 rounded-xl bg-black/40 border  text-xs text-left text-zinc-400 max-w-sm mx-auto space-y-1 font-mono">
+        <div className="glass p-4 rounded-xl text-xs text-left text-zinc-400 max-w-sm mx-auto space-y-1 font-mono">
           <div><strong className="text-zinc-300">Services:</strong> {selectedServices.join(", ")}</div>
           <div><strong className="text-zinc-300">Budget:</strong> {selectedBudget}</div>
           <div><strong className="text-zinc-300">Timeline:</strong> {selectedTimeline}</div>
@@ -76,13 +76,13 @@ export function ContactForm() {
           <button type="button" onClick={() => {
                 setSubmitted(false);
                 setMessage("");
-            }} className="px-6 py-2.5 rounded-full text-xs font-semibold text-zinc-300 hover:text-white bg-white/5 hover:bg-white/10 border  transition-all">
+            }} className="glass-btn px-6 py-2.5 rounded-full text-xs font-semibold text-zinc-300 hover:text-white transition-all">
             Submit Another Project Brief
           </button>
         </div>
       </div>);
     }
-    return (<form onSubmit={handleSubmit} className="p-6 md:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] to-white/[0.01] border  shadow-2xl backdrop-blur-md space-y-8">
+    return (<form onSubmit={handleSubmit} className="glass-panel p-6 md:p-10 rounded-3xl space-y-8">
       {errorMsg && (<div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center gap-3 text-sm text-red-400">
           <AlertCircle size={18} className="shrink-0"/>
           <span>{errorMsg}</span>
@@ -97,8 +97,8 @@ export function ContactForm() {
           {availableServices.map((svc) => {
             const isSelected = selectedServices.includes(svc);
             return (<button type="button" key={svc} onClick={() => toggleService(svc)} className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${isSelected
-                    ? "bg-[#c73834] text-white shadow-md shadow-[#c73834]/30 border border-[#c73834]"
-                    : "bg-white/[0.03] text-zinc-300 hover:text-white hover:bg-white/[0.08] border "}`}>
+                    ? "glass-btn-primary text-white"
+                    : "glass-btn text-zinc-300 hover:text-white"}`}>
                 {isSelected ? `✓ ${svc}` : `+ ${svc}`}
               </button>);
         })}
@@ -114,8 +114,8 @@ export function ContactForm() {
           {budgetRanges.map((range) => {
             const isSelected = selectedBudget === range;
             return (<button type="button" key={range} onClick={() => setSelectedBudget(range)} className={`p-3 rounded-xl text-left text-xs font-medium transition-all ${isSelected
-                    ? "bg-[#c73834]/20 border border-[#c73834] text-white"
-                    : "bg-white/[0.03] border  text-zinc-400 hover:text-white hover:bg-white/[0.06]"}`}>
+                    ? "glass bg-[#c73834]/20 border-[#c73834]/70 text-white"
+                    : "glass text-zinc-400 hover:text-white"}`}>
                 <div className="flex items-center justify-between">
                   <span>{range}</span>
                   {isSelected && <span className="w-2 h-2 rounded-full bg-[#c73834]"/>}
@@ -134,8 +134,8 @@ export function ContactForm() {
           {timelines.map((timeline) => {
             const isSelected = selectedTimeline === timeline;
             return (<button type="button" key={timeline} onClick={() => setSelectedTimeline(timeline)} className={`p-2.5 rounded-xl text-center text-xs font-medium transition-all ${isSelected
-                    ? "bg-white/15 text-white border "
-                    : "bg-white/[0.03] text-zinc-400 hover:text-white border "}`}>
+                    ? "glass bg-white/15 text-white border-white/30"
+                    : "glass text-zinc-400 hover:text-white"}`}>
                 {timeline}
               </button>);
         })}
@@ -173,7 +173,7 @@ export function ContactForm() {
 
       {/* Submit Button */}
       <div>
-        <button type="submit" disabled={isSubmitting} className="w-full flex items-center justify-center gap-3 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-[#c73834] via-[#bd2e2a] to-[#991e1a] hover:from-[#d9433f] hover:to-[#b32623] shadow-lg shadow-[#c73834]/30 hover:shadow-[#c73834]/50 transition-all duration-300 disabled:opacity-50">
+        <button type="submit" disabled={isSubmitting} className="glass-btn-primary w-full flex items-center justify-center gap-3 py-4 rounded-full text-base font-semibold text-white transition-all duration-300 disabled:opacity-50">
           {isSubmitting ? (<div className="flex items-center gap-2">
               <span className="w-4 h-4 border-2   rounded-full animate-spin"/>
               <span>Transmitting Brief...</span>

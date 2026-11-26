@@ -196,7 +196,7 @@ function ProjectsPage() {
         />
 
         {/* Filter Bar */}
-        <section className="py-8 bg-[#0a0c11] border-b border-white/10 sticky top-[60px] md:top-[70px] z-30 backdrop-blur-md bg-[#0a0c11]/90">
+        <section className="glass-nav py-8 sticky top-[60px] md:top-[70px] z-30">
           <div className="shell flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-2">
               {[
@@ -214,8 +214,8 @@ function ProjectsPage() {
                     onClick={() => setActiveFilter(tab.id as typeof activeFilter)}
                     className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
                       isActive
-                        ? "bg-[#c73834] text-white shadow-md shadow-[#c73834]/30 font-semibold"
-                        : "bg-white/[0.04] text-zinc-400 hover:text-white hover:bg-white/[0.08] border border-white/10"
+                        ? "glass-btn-primary text-white font-semibold"
+                        : "glass-btn text-zinc-400 hover:text-white"
                     }`}
                   >
                     {tab.label}
@@ -236,18 +236,18 @@ function ProjectsPage() {
             {filteredProjects.map((project, idx) => (
               <div
                 key={project.id}
-                className="p-8 md:p-12 rounded-3xl bg-gradient-to-b from-white/[0.03] to-white/[0.01] border border-white/10 hover:border-[#c73834]/40 transition-all duration-300 shadow-xl"
+                className="glass-card p-8 md:p-12 rounded-3xl hover:border-[#c73834]/40 transition-all duration-300 shadow-xl"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* Media Column */}
-                  <div className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-white/10 shadow-lg group">
+                  <div className="glass-media lg:col-span-5 relative rounded-2xl overflow-hidden shadow-lg group">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-[280px] sm:h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#0c0e14]/90 border border-white/15 text-[11px] font-mono text-zinc-300 backdrop-blur-md">
+                    <div className="glass-chip absolute top-4 left-4 px-3 py-1 rounded-full bg-black/45 text-[11px] font-mono text-zinc-200">
                       {project.categoryLabel}
                     </div>
                   </div>
@@ -277,7 +277,7 @@ function ProjectsPage() {
                     </div>
 
                     {/* Impact Metric Chips */}
-                    <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-black/40 border border-white/10">
+                    <div className="glass grid grid-cols-3 gap-3 p-4 rounded-2xl">
                       {project.metrics.map((m) => (
                         <div key={m.label} className="text-center">
                           <div className="text-lg sm:text-2xl font-bold font-display text-white">
@@ -295,7 +295,7 @@ function ProjectsPage() {
                       {project.tags.map((t) => (
                         <span
                           key={t}
-                          className="px-2.5 py-1 rounded-lg text-xs font-mono bg-white/[0.04] border border-white/10 text-zinc-300"
+                          className="glass-badge px-2.5 py-1 rounded-lg text-xs font-mono text-zinc-300"
                         >
                           {t}
                         </span>
@@ -334,7 +334,7 @@ function ProjectsPage() {
             <div className="pt-4 flex justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#c73834] to-[#a82522] hover:from-[#d9433f] hover:to-[#b82e2b] shadow-xl shadow-[#c73834]/30 transition-all hover:scale-105"
+                className="glass-btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-semibold text-white transition-all hover:scale-105"
               >
                 <span>Initiate Your Project</span>
                 <ArrowRight size={16} />

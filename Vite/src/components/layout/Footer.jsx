@@ -2,56 +2,21 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Instagram, Linkedin, Mail, MapPin, Phone, Sparkles, X as TwitterX } from "lucide-react";
 import logo from "../../assets/mizaan-trans.png";
 export function Footer() {
-    return (<footer className="relative bg-[#090b0f] text-zinc-300 pt-20 pb-12 overflow-hidden border-t ">
-      {/* Ambient background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[250px] bg-gradient-to-b from-[#c73834]/15 to-transparent blur-3xl pointer-events-none"/>
-
+  return (
+    <footer className="relative bg-[#090b0f] text-zinc-300 pt-10 pb-12 overflow-hidden border-t ">
+     
       <div className="shell relative z-10">
-        {/* Top Callout Box */}
-        <div className="mb-16 p-8 md:p-12 rounded-3xl glass-section flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border border-[#c73834]/30 mb-3">
-              <Sparkles size={13}/>
-              <span>Ready for Growth?</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-display tracking-tight">
-              Have a digital vision in mind? Let's engineer it.
-            </h2>
-            <p className="text-zinc-400 mt-2 text-base max-w-2xl">
-              From high-performance web and mobile apps to custom AI systems and enterprise platforms, we turn ambitious ideas into dependable realities.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <Link to="/contact" className="glass-btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-white transition-all hover:scale-105 active:scale-100">
-              <span>Schedule a Consultation</span>
-              <ArrowUpRight size={18}/>
-            </Link>
-            <a href="tel:+917448552778" className="glass-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white transition-all">
-              <Phone size={16}/>
-              <span>Call Our Studio</span>
-            </a>
-          </div>
-        </div>
 
         {/* Main Footer Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b ">
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-5">
             <Link to="/" className="inline-block">
-              <img src={logo} alt="Mizaan Technologies" className="h-10 w-auto"/>
+              <img src={logo} alt="Mizaan Technologies" className="h-10 w-auto" />
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed max-w-sm">
               Mizaan Technologies is a premier independent engineering & digital product studio. We combine architectural precision with human-centered aesthetics to build software that scales.
             </p>
-            <div className="flex items-center gap-3 pt-2">
-              <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </span>
-              <span className="text-xs text-zinc-400 font-mono">
-                Studio Status: Operational · Accepting Q2/Q3 Projects
-              </span>
-            </div>
           </div>
 
           {/* Navigation Links */}
@@ -139,15 +104,15 @@ export function Footer() {
             </h3>
             <div className="space-y-3 text-sm">
               <a href="tel:+917448552778" className="flex items-center gap-2.5 text-zinc-400 hover:text-white transition-colors">
-                <Phone size={15} className="text-[#e65c58]"/>
+                <Phone size={15} className="text-[#e65c58]" />
                 <span>+91 744 855 2778</span>
               </a>
-              <a href="mailto:project@mizaantech.co.in" className="flex items-center gap-2.5 text-zinc-400 hover:text-white transition-colors">
-                <Mail size={15} className="text-[#e65c58]"/>
-                <span>project@mizaantech.co.in</span>
+              <a href="mailto:salam@mizaantech.co.in" className="flex items-center gap-2.5 text-zinc-400 hover:text-white transition-colors">
+                <Mail size={15} className="text-[#e65c58]" />
+                <span>salam@mizaantech.co.in</span>
               </a>
               <div className="flex items-start gap-2.5 text-zinc-400">
-                <MapPin size={16} className="text-[#e65c58] mt-0.5 shrink-0"/>
+                <MapPin size={16} className="text-[#e65c58] mt-0.5 shrink-0" />
                 <span>Vaniyambadi, Tirupattur Dt., Tamil Nadu, India</span>
               </div>
             </div>
@@ -155,13 +120,13 @@ export function Footer() {
             {/* Social handles */}
             <div className="flex items-center gap-3 pt-4">
               <a href="https://instagram.com/mizaantech.co.in" target="_blank" rel="noreferrer" className="glass-btn w-8 h-8 rounded-full flex items-center justify-center text-zinc-400 hover:text-white hover:border-[#c73834] transition-all" aria-label="Instagram">
-                <Instagram size={14}/>
+                <Instagram size={14} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="glass-btn w-8 h-8 rounded-full flex items-center justify-center text-zinc-400 hover:text-white hover:border-[#c73834] transition-all" aria-label="LinkedIn">
-                <Linkedin size={14}/>
+                <Linkedin size={14} />
               </a>
               <a href="https://x.com/mizaantechx" target="_blank" rel="noreferrer" className="glass-btn w-8 h-8 rounded-full flex items-center justify-center text-zinc-400 hover:text-white hover:border-[#c73834] transition-all" aria-label="X / Twitter">
-                <TwitterX size={14}/>
+                <TwitterX size={14} />
               </a>
             </div>
           </div>
@@ -189,7 +154,7 @@ export function Footer() {
 
         {/* Studio Logo at Bottom */}
         <div className="flex justify-center items-center pt-10 pb-2">
-          <img src={logo} alt="Mizaan Technologies" className="h-28 w-auto opacity-30 hover:opacity-80 transition-all duration-300 "/>
+          <img src={logo} alt="Mizaan Technologies" className="h-28 w-auto opacity-30 hover:opacity-80 transition-all duration-300 " />
         </div>
       </div>
     </footer>);

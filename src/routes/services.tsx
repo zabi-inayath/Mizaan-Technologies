@@ -233,14 +233,14 @@ function ServicesPage() {
                 >
                   {/* Media Column */}
                   <div className={`lg:col-span-6 ${isEven ? "lg:col-start-7" : ""}`}>
-                    <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+                    <div className="glass-card relative rounded-3xl overflow-hidden shadow-2xl group">
                       <img
                         src={service.image}
                         alt={service.title}
                         className="w-full h-[380px] sm:h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#090b0f] via-transparent to-transparent opacity-80" />
-                      <div className="absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-[#0c0e14]/90 border border-white/15 text-xs font-mono text-zinc-300 backdrop-blur-md">
+                      <div className="glass-chip absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-black/45 text-xs font-mono text-zinc-200">
                         {service.number} / {service.title.split(" ")[0].toUpperCase()}
                       </div>
                     </div>
@@ -287,7 +287,7 @@ function ServicesPage() {
                         {service.techStack.map((tech) => (
                           <span
                             key={tech}
-                            className="px-2.5 py-1 rounded-lg text-xs font-mono bg-white/[0.04] border border-white/10 text-zinc-300"
+                            className="glass-badge px-2.5 py-1 rounded-lg text-xs font-mono text-zinc-300"
                           >
                             {tech}
                           </span>
@@ -298,7 +298,7 @@ function ServicesPage() {
                     <div className="pt-4">
                       <Link
                         to="/contact"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold text-white bg-[#c73834] hover:bg-[#d9433f] shadow-md shadow-[#c73834]/30 transition-all hover:scale-105"
+                        className="glass-btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-semibold text-white transition-all hover:scale-105"
                       >
                         <span>Inquire About {service.title.split("&")[0].trim()}</span>
                         <ArrowRight size={14} />
@@ -330,7 +330,7 @@ function ServicesPage() {
               {developmentPhases.map((phase) => (
                 <div
                   key={phase.step}
-                  className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-[#c73834]/30 transition-all space-y-4 flex flex-col justify-between"
+                  className="glass-card p-8 rounded-3xl hover:border-[#c73834]/30 transition-all space-y-4 flex flex-col justify-between"
                 >
                   <div>
                     <span className="text-3xl font-bold font-display text-[#e65c58]">{phase.step}</span>
@@ -349,7 +349,7 @@ function ServicesPage() {
         {/* CTA Banner */}
         <section className="py-24 bg-[#0a0c11]">
           <div className="shell">
-            <div className="p-8 md:p-14 rounded-3xl bg-gradient-to-r from-white/[0.04] to-white/[0.01] border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="glass-section p-8 md:p-14 rounded-3xl flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="space-y-3 max-w-xl">
                 <span className="text-xs font-mono uppercase tracking-widest text-[#e65c58] font-bold">
                   Custom Architecture
@@ -364,7 +364,7 @@ function ServicesPage() {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#c73834] to-[#a82522] hover:from-[#d9433f] hover:to-[#b82e2b] shadow-xl shadow-[#c73834]/30 transition-all hover:scale-105 shrink-0"
+                className="glass-btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white transition-all hover:scale-105 shrink-0"
               >
                 <span>Book Technical Discovery</span>
                 <ArrowRight size={16} />

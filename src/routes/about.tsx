@@ -159,14 +159,14 @@ function AboutPage() {
 
               {/* Office Image with Floating Location Badge */}
               <div className="lg:col-span-6">
-                <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="glass-card relative rounded-3xl overflow-hidden shadow-2xl group">
                   <img
                     src={officeImage}
                     alt="Mizaan Technologies studio office in Vaniyambadi"
                     className="w-full h-[450px] md:h-[550px] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-[#090b0f]/85 border border-white/15 backdrop-blur-md flex items-center justify-between">
+                  <div className="glass absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-black/45 flex items-center justify-between">
                     <div>
                       <div className="text-xs font-mono text-[#e65c58] font-bold uppercase tracking-wider">
                         Engineering Headquarters
@@ -207,7 +207,7 @@ function AboutPage() {
                 return (
                   <div
                     key={value.title}
-                    className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-[#c73834]/40 transition-all duration-300 hover:-translate-y-1 space-y-4"
+                    className="glass-card p-8 rounded-3xl hover:border-[#c73834]/40 transition-all duration-300 hover:-translate-y-1 space-y-4"
                   >
                     <div className="flex items-center justify-between">
                       <div className="w-12 h-12 rounded-2xl bg-[#c73834]/15 border border-[#c73834]/30 text-[#e65c58] flex items-center justify-center">
@@ -240,7 +240,7 @@ function AboutPage() {
               {timelineMilestones.map((item) => (
                 <div
                   key={item.year}
-                  className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between space-y-4"
+                  className="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-4"
                 >
                   <div>
                     <span className="text-2xl font-bold font-display text-[#e65c58]">{item.year}</span>
@@ -259,7 +259,7 @@ function AboutPage() {
         {/* Community & Vaniyambadi Hub */}
         <section className="py-24 bg-[#08090d]">
           <div className="shell">
-            <div className="p-8 md:p-14 rounded-3xl bg-gradient-to-r from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="glass-section p-8 md:p-14 rounded-3xl flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="space-y-4 max-w-xl">
                 <span className="text-xs font-mono uppercase tracking-widest text-[#e65c58] font-bold">
                   Regional Impact · Global Reach
@@ -275,14 +275,14 @@ function AboutPage() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-[#c73834] hover:bg-[#d9433f] shadow-lg shadow-[#c73834]/30 transition-all hover:scale-105"
+                  className="glass-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white transition-all hover:scale-105"
                 >
                   <span>Work With Us</span>
                   <ArrowRight size={16} />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all"
+                  className="glass-btn inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-zinc-300 hover:text-white transition-all"
                 >
                   <span>Explore Capabilities</span>
                 </Link>

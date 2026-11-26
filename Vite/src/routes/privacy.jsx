@@ -13,7 +13,7 @@ function PrivacyPage() {
         <section className="py-20 bg-[#0a0c11]">
           <div className="shell max-w-4xl mx-auto space-y-12">
             {/* Meta summary card */}
-            <div className="p-6 rounded-2xl bg-white/[0.03] border  flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-zinc-400">
+            <div className="glass-card p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono text-zinc-400">
               <div>
                 <span className="text-zinc-200 font-semibold">Effective Date:</span> September 2026
               </div>
@@ -51,7 +51,7 @@ function PrivacyPage() {
                   We treat all client code, database architectures, system specifications, and commercial plans as strictly confidential. Unlike conventional agencies:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-xl bg-white/[0.02] border  space-y-2">
+                  <div className="glass-card p-4 rounded-xl space-y-2">
                     <div className="font-semibold text-white flex items-center gap-2">
                       <Lock size={15} className="text-[#e65c58]"/>
                       <span>Zero Proprietary Model Training</span>
@@ -60,7 +60,7 @@ function PrivacyPage() {
                       We never use your proprietary code or private company data to train public artificial intelligence models.
                     </p>
                   </div>
-                  <div className="p-4 rounded-xl bg-white/[0.02] border  space-y-2">
+                  <div className="glass-card p-4 rounded-xl space-y-2">
                     <div className="font-semibold text-white flex items-center gap-2">
                       <CheckCircle2 size={15} className="text-[#e65c58]"/>
                       <span>100% Full IP Ownership</span>
@@ -91,7 +91,7 @@ function PrivacyPage() {
                 <p>
                   If you have any questions or require an executed Non-Disclosure Agreement (NDA) prior to discussing a confidential project, please contact our lead engineering office:
                 </p>
-                <div className="p-6 rounded-2xl bg-black/40 border  space-y-2 text-xs font-mono text-zinc-300">
+                <div className="glass p-6 rounded-2xl space-y-2 text-xs font-mono text-zinc-300">
                   <div><strong>Mizaan Technologies</strong> · Data Protection</div>
                   <div><strong>Email:</strong> project@mizaantech.co.in</div>
                   <div><strong>Phone:</strong> +91 744 855 2778</div>

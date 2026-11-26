@@ -149,7 +149,7 @@ function ContactPage() {
         <section className="py-24 bg-[#08090d]">
           <div className="shell max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border border-[#c73834]/30 mb-3">
+              <div className="glass-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border-[#c73834]/30 mb-3">
                 <HelpCircle size={13}/>
                 <span>Frequently Asked Questions</span>
               </div>

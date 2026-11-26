@@ -111,7 +111,7 @@ function ContactPage() {
               {/* Right Column: Studio Coordinates & Trust */}
               <div className="lg:col-span-5 space-y-6">
                 {/* Direct Contact Card */}
-                <div className="p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] to-white/[0.01] border border-white/10 space-y-6 shadow-xl">
+                <div className="glass-card p-8 rounded-3xl space-y-6 shadow-xl">
                   <div>
                     <span className="text-xs font-mono uppercase tracking-widest text-[#e65c58] font-bold">
                       Direct Coordinates
@@ -125,7 +125,7 @@ function ContactPage() {
                     {/* Phone */}
                     <a
                       href="tel:+917448552778"
-                      className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#c73834]/40 hover:bg-white/[0.05] transition-all group"
+                      className="glass flex items-start gap-4 p-4 rounded-2xl hover:border-[#c73834]/40 transition-all group"
                     >
                       <div className="w-10 h-10 rounded-xl bg-[#c73834]/15 border border-[#c73834]/30 text-[#e65c58] flex items-center justify-center shrink-0">
                         <Phone size={18} />
@@ -142,7 +142,7 @@ function ContactPage() {
                     {/* Email */}
                     <a
                       href="mailto:project@mizaantech.co.in"
-                      className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#c73834]/40 hover:bg-white/[0.05] transition-all group"
+                      className="glass flex items-start gap-4 p-4 rounded-2xl hover:border-[#c73834]/40 transition-all group"
                     >
                       <div className="w-10 h-10 rounded-xl bg-[#c73834]/15 border border-[#c73834]/30 text-[#e65c58] flex items-center justify-center shrink-0">
                         <Mail size={18} />
@@ -157,7 +157,7 @@ function ContactPage() {
                     </a>
 
                     {/* Location */}
-                    <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                    <div className="glass flex items-start gap-4 p-4 rounded-2xl">
                       <div className="w-10 h-10 rounded-xl bg-[#c73834]/15 border border-[#c73834]/30 text-[#e65c58] flex items-center justify-center shrink-0">
                         <MapPin size={18} />
                       </div>
@@ -176,7 +176,7 @@ function ContactPage() {
                     href="https://wa.me/917448552778?text=Hello%20Mizaan%20Technologies,%20I%20would%20like%20to%20discuss%20a%20project."
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center gap-2.5 py-3 rounded-full text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.02]"
+                    className="w-full flex items-center justify-center gap-2.5 py-3 rounded-full text-xs font-semibold text-white bg-emerald-600/90 hover:bg-emerald-500 backdrop-blur-md border border-emerald-400/30 shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.02]"
                   >
                     <MessageSquare size={16} />
                     <span>Chat on WhatsApp Directly</span>
@@ -185,7 +185,7 @@ function ContactPage() {
                 </div>
 
                 {/* Trust Guarantees */}
-                <div className="p-6 rounded-3xl bg-black/40 border border-white/10 space-y-3">
+                <div className="glass p-6 rounded-3xl space-y-3">
                   <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-300 font-semibold">
                     <ShieldCheck size={16} className="text-[#e65c58]" />
                     <span>Our Engagement Guarantee</span>
@@ -214,7 +214,7 @@ function ContactPage() {
         <section className="py-24 bg-[#08090d]">
           <div className="shell max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border border-[#c73834]/30 mb-3">
+              <div className="glass-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-[#e65c58] bg-[#c73834]/15 border-[#c73834]/30 mb-3">
                 <HelpCircle size={13} />
                 <span>Frequently Asked Questions</span>
               </div>
@@ -230,7 +230,7 @@ function ContactPage() {
               {faqs.map((faq, idx) => (
                 <div
                   key={faq.question}
-                  className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all space-y-2"
+                  className="glass-card p-6 rounded-2xl transition-all space-y-2"
                 >
                   <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     {faq.question}

@@ -151,10 +151,10 @@ function ServicesPage() {
             return (<div key={service.id} id={service.id} className={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ${isEven ? "lg:grid-flow-dense" : ""}`}>
                   {/* Media Column */}
                   <div className={`lg:col-span-6 ${isEven ? "lg:col-start-7" : ""}`}>
-                    <div className="relative rounded-3xl overflow-hidden border  shadow-2xl group">
+                    <div className="glass-card relative rounded-3xl overflow-hidden shadow-2xl group">
                       <img src={service.image} alt={service.title} className="w-full h-[380px] sm:h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
                       <div className="absolute inset-0 bg-gradient-to-t from-[#090b0f] via-transparent to-transparent opacity-80"/>
-                      <div className="absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-[#0c0e14]/90 border  text-xs font-mono text-zinc-300 backdrop-blur-md">
+                      <div className="glass-chip absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-black/45 text-xs font-mono text-zinc-200">
                         {service.number} / {service.title.split(" ")[0].toUpperCase()}
                       </div>
                     </div>

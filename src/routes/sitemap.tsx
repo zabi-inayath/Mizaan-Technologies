@@ -72,7 +72,7 @@ function SitemapPage() {
 
         <section className="py-20 bg-[#0a0c11]">
           <div className="shell max-w-5xl mx-auto space-y-16">
-            <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+            <div className="glass p-4 rounded-xl flex items-center justify-between text-xs font-mono text-zinc-400">
               <span>XML Sitemap Available:</span>
               <a
                 href="/sitemap.xml"
@@ -91,7 +91,7 @@ function SitemapPage() {
                 return (
                   <div
                     key={group.title}
-                    className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-6 flex flex-col justify-between"
+                    className="glass-card p-8 rounded-3xl space-y-6 flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
