@@ -145,13 +145,10 @@ export function CoreServicesOrbit() {
     >
       <div className="shell">
         {/* Header */}
-        <div className="max-w-2xl mx-auto text-center space-y-4 mb-14 md:mb-16">
+        <div className="max-w-7xl mx-auto text-center space-y-4 mb-14 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
-            Our Core Services
+           Everything Your Business Needs to Grow Digitally.
           </h2>
-          <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-            Select any service to see how we build it.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -227,11 +224,11 @@ export function CoreServicesOrbit() {
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link
                   to={activeService.link}
-                  className="py-3 px-6 rounded-full bg-white hover:bg-zinc-200 text-[#08090d] text-sm font-semibold inline-flex items-center gap-2 transition-colors"
+                  className="py-3 px-6 rounded-full bg-white hover:bg-zinc-200 text-[#e65c58] text-sm font-semibold inline-flex items-center gap-2 transition-colors"
                 >
-                  <span>Explore Service</span>
-                  <ArrowUpRight size={16} />
-                </Link>
+                  <span className="text-[#e65c58]">Explore Service</span>
+                  <ArrowUpRight size={16} className="text-[#e65c58]" />
+                </Link> 
 
                 <Link
                   to="/contact"

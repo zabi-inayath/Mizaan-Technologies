@@ -1916,12 +1916,9 @@ footer {
   width: 42px;
   height: 42px;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, .11);
-  border-radius: 13px;
-  background: rgba(255, 255, 255, .045);
   color: #e87973;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 28px;
   font-weight: 650;
 }
 

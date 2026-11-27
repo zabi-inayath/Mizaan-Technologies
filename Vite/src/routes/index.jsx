@@ -311,6 +311,8 @@ function Index() {
       {/* Revamped Hero Section */}
       <RevampedHero />
 
+      {/* Our Core Services (3D Orbital Ecosystem) */}
+      <CoreServicesOrbit />
 
       {/* Services Showcase Section */}
       <section className="py-14 bg-[#08090d] border-b " id="services">
@@ -318,7 +320,7 @@ function Index() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-center mb-16 gap-6">
             <div>
               <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight">
-                Everything Your Business Needs to Grow Digitally.
+                Our Core Services
               </h2>
             </div>
           </div>
@@ -523,9 +525,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Our Core Services (3D Orbital Ecosystem) */}
-      <CoreServicesOrbit />
-
       {/* How We Work: Our Proven Process */}
       <section className="py-14 bg-[#08090d] border-b border-white/10 relative overflow-hidden" id="process">
         <div className="absolute top-1/2 left-0 w-[420px] h-[260px] bg-[#c73834]/10 rounded-full blur-[130px] pointer-events-none" />
@@ -553,11 +552,11 @@ function Index() {
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="glass-badge px-3 py-1 rounded-full text-[11px] font-mono font-semibold text-[#e65c58]">
+                      <span className="px-3 py-1 font-mono font-semibold text-[#e65c58]">
                         STEP {phase.step}
                       </span>
-                      <div className="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/15 text-zinc-200 flex items-center justify-center">
-                        <Icon size={18} />
+                      <div className="w-10 h-10 text-zinc-200 flex items-center justify-center">
+                        <Icon size={38} />
                       </div>
                     </div>
                     <h3 className="text-xl font-bold font-display text-white tracking-tight">
@@ -566,11 +565,6 @@ function Index() {
                     <p className="text-sm text-zinc-300/80 leading-relaxed">
                       {phase.description}
                     </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-mono text-zinc-300">
-                    <CheckCircle2 size={14} className="text-emerald-400 shrink-0" />
-                    <span>{phase.deliverable}</span>
                   </div>
                 </div>
               );
@@ -604,8 +598,8 @@ function Index() {
                   key={reason.title}
                   className="glass-card rounded-[32px] p-7 sm:p-8 space-y-4 transition-all duration-500 hover:-translate-y-1.5"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#c73834]/15 border border-[#c73834]/30 text-[#e65c58] flex items-center justify-center backdrop-blur-md">
-                    <Icon size={22} />
+                  <div className="w-12 h-12 rounded-2xl text-[#e65c58] flex items-center justify-center">
+                    <Icon size={42} />
                   </div>
                   <h3 className="text-xl font-bold font-display text-white tracking-tight">
                     {reason.title}
@@ -616,60 +610,6 @@ function Index() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Primary Use Cases */}
-      <section className="py-14 bg-[#08090d] border-b border-white/10 relative overflow-hidden" id="use-cases">
-        <div className="shell relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
-              Primary{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
-                Use Cases
-              </span>
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-300/85 leading-relaxed">
-              From retail counters to enterprise operations and automated workflows—explore where our technology creates immediate leverage.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
-            {primaryUseCases.map((useCase) => (
-              <div
-                key={useCase.title}
-                className="glass-card rounded-[32px] p-7 sm:p-8 flex flex-col justify-between gap-6 transition-all duration-500 hover:-translate-y-1.5 group"
-              >
-                <div className="space-y-4">
-                  <span className="glass-badge inline-block px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider text-[#e65c58]">
-                    {useCase.category}
-                  </span>
-                  <h3 className="text-xl font-bold font-display text-white tracking-tight group-hover:text-[#f17b75] transition-colors">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-sm text-zinc-300/80 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    {useCase.highlights.map((tag) => (
-                      <span key={tag} className="glass-badge px-3 py-1 rounded-full text-[11px] font-medium text-zinc-200">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <Link
-                  to="/contact"
-                  className="glass-btn w-full py-3 px-5 rounded-full text-xs font-semibold text-white flex items-center justify-center gap-2 transition-all"
-                >
-                  <span>Discuss This Use Case</span>
-                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -710,60 +650,13 @@ function Index() {
         </div>
       </section>
 
-      {/* About Studio Spotlight */}
-      <section className="py-24 bg-[#0a0c11] border-b " id="about">
-        <div className="shell">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="glass-card lg:col-span-6 relative rounded-3xl overflow-hidden shadow-2xl group">
-              <img src={officeImage} alt="Mizaan Technologies office in Vaniyambadi" className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-
-            </div>
-
-            <div className="lg:col-span-6 space-y-6">
-
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-tight">
-                A Compact Team with a Serious Standard.
-              </h2>
-              <p className="text-zinc-300 text-base leading-relaxed">
-                We help founders and established companies transform ambitious ideas into practical, scalable digital products. Every engagement is collaborative, transparent, and measured by the tangible value it generates.
-              </p>
-
-              <div className="grid grid-cols-3 gap-6 pt-4 border-t ">
-                <div>
-                  <div className="text-3xl font-bold font-display text-white">50+</div>
-                  <div className="text-xs text-zinc-400 mt-1 uppercase font-mono">Delivered Systems</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold font-display text-[#e65c58]">5+</div>
-                  <div className="text-xs text-zinc-400 mt-1 uppercase font-mono">Global Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold font-display text-emerald-400">3+</div>
-                  <div className="text-xs text-zinc-400 mt-1 uppercase font-mono">Years Excellence</div>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <Link to="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#e65c58] transition-colors">
-                  <span>Read about our culture, principles, and team</span>
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Closing Contact CTA */}
       <section className="py-24 bg-[#08090d] relative overflow-hidden" id="contact">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#c73834]/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="shell relative z-10">
           <div className="glass-section p-8 md:p-16 rounded-3xl text-center max-w-4xl mx-auto space-y-8">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#e65c58] font-bold">
-              Initiate Dialogue
-            </span>
+            
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white tracking-tight leading-[1.05]">
               Have something in mind? Let’s make it{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e65c58] to-[#c73834]">
