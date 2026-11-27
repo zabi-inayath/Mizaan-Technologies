@@ -187,11 +187,12 @@ export function CoreServicesOrbit() {
               </div>
 
               {/* Center emblem */}
-              <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-white/10 bg-[#0a0c11] flex flex-col items-center justify-center text-center">
-               
-                <img src="../../../../../assets/mizaan-trans.png" alt="Mizaan Technologies" className="w-10 h-10 sm:w-12 sm:h-12 mb-1" />
-
-                
+              <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-white/10 bg-[#0a0c11] flex items-center justify-center p-3">
+                <img
+                  src={logo}
+                  alt="Mizaan Technologies"
+                  className="w-16 sm:w-20 h-auto object-contain"
+                />
               </div>
             </div>
           </div>
@@ -268,3 +269,8 @@ export function CoreServicesOrbit() {
               })}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
