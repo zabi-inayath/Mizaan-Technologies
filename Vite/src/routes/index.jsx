@@ -2,33 +2,35 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ArrowUpRight,
-  Bot,
   Briefcase,
   CheckCircle2,
   Clock,
   Code2,
   Compass,
   Cpu,
-  Globe,
   Layers,
   Lock,
   Rocket,
   ShieldCheck,
-  ShoppingBag,
-  Smartphone,
-  Sparkles,
-  Store,
   Users,
   Zap,
 } from "lucide-react";
 import officeImage from "../assets/mizaan-office.jpg";
-import webImage from "../assets/service-web.jpg";
-import mobileImage from "../assets/service-mobile.jpg";
-import softwareImage from "../assets/service-software.jpg";
-import designImage from "../assets/service-design.jpg";
+
+import customSoftwareImage from "../assets/services/customsoftware.png";
+import ecommerceImage from "../assets/services/ecomdevelop.png";
+import webappImage from "../assets/services/webapp.png";
+import ERP from "../assets/services/ERP.png";
+import CRM from "../assets/services/CRM.png";
+import POS from "../assets/services/POS.png";
+
+import Zafaf from "../assets/services/zafaf.png";
+import NFC from "../assets/services/NFC.png";
+
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { RevampedHero } from "../components/home/RevampedHero";
+import { CoreServicesOrbit } from "../components/home/CoreServicesOrbit";
 
 const serviceCardTints = [
   "from-[#090e17] via-[#0e1926]/85 to-transparent",
@@ -41,7 +43,7 @@ const serviceCardTints = [
 
 const featuredServices = [
   {
-    image: softwareImage,
+    image: customSoftwareImage,
     number: "02",
     label: "Software Solutions",
     title: "Custom Software Development",
@@ -49,7 +51,7 @@ const featuredServices = [
     link: "/services#custom-software",
   },
   {
-    image: webImage,
+    image: ecommerceImage,
     number: "03",
     label: "Online Commerce",
     title: "E-Commerce Development",
@@ -57,7 +59,7 @@ const featuredServices = [
     link: "/services#ecommerce",
   },
   {
-    image: webImage,
+    image: webappImage,
     number: "04",
     label: "Web Engineering",
     title: "Web Application Development",
@@ -65,7 +67,7 @@ const featuredServices = [
     link: "/services#web-app",
   },
   {
-    image: softwareImage,
+    image: ERP,
     number: "05",
     label: "Business Management",
     title: "ERP Development",
@@ -73,7 +75,7 @@ const featuredServices = [
     link: "/services#erp",
   },
   {
-    image: softwareImage,
+    image: CRM,
     number: "06",
     label: "Customer Management",
     title: "CRM Development",
@@ -81,7 +83,7 @@ const featuredServices = [
     link: "/services#crm",
   },
   {
-    image: softwareImage,
+    image: POS,
     number: "07",
     label: "Retail Management",
     title: "POS Development",
@@ -120,7 +122,7 @@ const flagshipProjects = [
     metric: "Multi-Industry POS",
     description:
       "A flexible point-of-sale solution for grocery, garments, textiles, footwear, electronics, mobile, hardware, stationery, jewellery, wholesale, and restaurant businesses. Industry-specific modules and configurations adapt to your business needs.",
-    image: webImage,
+    image: POS,
     tags: [
       "Supermarket POS",
       "Inventory Management",
@@ -134,7 +136,7 @@ const flagshipProjects = [
     metric: "Beautiful Digital Invitations",
     description:
       "Create elegant and personalized digital invitations for weddings and special occasions. Explore beautifully designed web invitations, e-invites, and video invitations for meaningful celebrations.",
-    image: designImage,
+    image: Zafaf,
     tags: [
       "Web Invitations",
       "E-Invites",
@@ -148,7 +150,7 @@ const flagshipProjects = [
     metric: "One Tap. Instant Connection.",
     description:
       "Modern NFC business cards that make sharing your contact details, Google reviews, business profile, website, and social links effortless. Connect with people instantly with a simple tap.",
-    image: mobileImage,
+    image: NFC,
     tags: [
       "NFC Business Cards",
       "Google Reviews",
@@ -179,57 +181,6 @@ const mizaanPillars = [
     title: "Designed to Scale With You",
     description:
       "Clean, maintainable architecture backed by direct senior engineers so your systems stay fast, secure, and adaptable as your business grows.",
-  },
-];
-
-const coreServicesList = [
-  {
-    icon: Globe,
-    title: "Website & Web App Engineering",
-    description:
-      "High-speed marketing websites, customer portals, and custom web applications engineered for clarity, SEO, and reliability.",
-    tags: ["Next.js & React", "Sub-Second Load"],
-    link: "/services#web-dev",
-  },
-  {
-    icon: Cpu,
-    title: "Custom Software & ERP Systems",
-    description:
-      "Tailored internal software, inventory engines, and ERP workflows built around the exact way your organization operates.",
-    tags: ["Bespoke ERP", "Role-Based Access"],
-    link: "/services#custom-software",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description:
-      "Smooth iOS and Android applications with offline-first sync, real-time notifications, and intuitive mobile UX.",
-    tags: ["iOS & Android", "60 FPS Native Feel"],
-    link: "/services#mobile-dev",
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce Platforms",
-    description:
-      "Conversion-focused digital storefronts with seamless checkout, catalog control, payment gateways, and order tracking.",
-    tags: ["Payment Gateways", "Order Management"],
-    link: "/services#ecommerce",
-  },
-  {
-    icon: Store,
-    title: "CRM & Retail POS Solutions",
-    description:
-      "Integrated point-of-sale billing, multi-branch inventory, and lead management systems that streamline daily operations.",
-    tags: ["Billing & Stock", "Lead Pipelines"],
-    link: "/services#pos",
-  },
-  {
-    icon: Bot,
-    title: "Super Intelligent Automation",
-    description:
-      "Practical AI workflows, smart document processing, and connected APIs that eliminate repetitive manual tasks.",
-    tags: ["AI Agents", "API Workflows"],
-    link: "/services#ai-automation",
   },
 ];
 
@@ -377,7 +328,7 @@ function Index() {
               const tint = serviceCardTints[idx % serviceCardTints.length];
               return (<div key={service.title} className="group relative min-h-[450px] sm:min-h-[470px] rounded-[32px] overflow-hidden border border-white/15 shadow-[0_24px_60px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.18)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_32px_72px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.24)] flex flex-col justify-end">
                 {/* Full-bleed Background Image */}
-                <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover -top-[15%] transition-transform duration-700 ease-out group-hover:scale-105" />
 
                 {/* Progressive Frosted Blur Layer */}
                 <div className="service-card-blur absolute inset-0 pointer-events-none" />
@@ -434,39 +385,39 @@ function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7">
             {/* Featured Lead Product Card (Full-Width Horizontal Glass) */}
             {flagshipProjects[0] && (<Link to="/projects" className="lg:col-span-12 group relative min-h-[380px] lg:min-h-[360px] rounded-[32px] overflow-hidden border border-white/15 shadow-[0_24px_60px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.18)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_32px_72px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.24)] flex items-end lg:items-center">
-                <img src={flagshipProjects[0].image} alt={flagshipProjects[0].title} className="absolute inset-0 w-full h-full object-cover object-right transition-transform duration-700 ease-out group-hover:scale-105"/>
-                <div className="product-card-blur-x absolute inset-0 pointer-events-none"/>
-                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#090d16] via-[#0d1624]/88 to-transparent pointer-events-none"/>
+              <img src={flagshipProjects[0].image} alt={flagshipProjects[0].title} className="absolute inset-0 w-full h-full object-cover -right-[10%] transition-transform duration-700 ease-out group-hover:scale-105" />
+              <div className="product-card-blur-x absolute inset-0 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#090d16] via-[#0d1624]/88 to-transparent pointer-events-none" />
 
-                <div className="relative z-10 w-full p-7 sm:p-10 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-                  <div className="max-w-xl space-y-4">
-                    
+              <div className="relative z-10 w-full p-7 sm:p-10 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                <div className="max-w-xl space-y-4">
 
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white tracking-tight leading-tight">
-                      {flagshipProjects[0].title}
-                    </h3>
 
-                    <p className="text-sm sm:text-base text-zinc-200/80 leading-relaxed">
-                      {flagshipProjects[0].description}
-                    </p>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white tracking-tight leading-tight">
+                    {flagshipProjects[0].title}
+                  </h3>
 
-                    <div className="flex flex-wrap gap-2 pt-1">
-                      {flagshipProjects[0].tags.slice(0, 3).map((tag) => (<span key={tag} className="px-3 py-1 rounded-full bg-white/[0.1] border border-white/15 backdrop-blur-md text-[11px] font-medium text-zinc-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
-                          {tag}
-                        </span>))}
-                    </div>
-                  </div>
+                  <p className="text-sm sm:text-base text-zinc-200/80 leading-relaxed">
+                    {flagshipProjects[0].description}
+                  </p>
 
-                  <div className="shrink-0 flex items-center gap-3 self-start lg:self-end">
-                    <span className="glass-btn px-5 py-3 rounded-full text-xs font-semibold text-white">
-                      Read Full Case Study
-                    </span>
-                    <span className="w-11 h-11 rounded-full bg-white text-[#08090d] flex items-center justify-center shadow-[0_10px_28px_rgba(255,255,255,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
-                      <ArrowUpRight size={18}/>
-                    </span>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {flagshipProjects[0].tags.slice(0, 3).map((tag) => (<span key={tag} className="px-3 py-1 rounded-full bg-white/[0.1] border border-white/15 backdrop-blur-md text-[11px] font-medium text-zinc-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                      {tag}
+                    </span>))}
                   </div>
                 </div>
-              </Link>)}
+
+                <div className="shrink-0 flex items-center gap-3 self-start lg:self-end">
+                  <span className="glass-btn px-5 py-3 rounded-full text-xs font-semibold text-white">
+                    Read Full Case Study
+                  </span>
+                  <span className="w-11 h-11 rounded-full bg-white text-[#08090d] flex items-center justify-center shadow-[0_10px_28px_rgba(255,255,255,0.18)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+                    <ArrowUpRight size={18} />
+                  </span>
+                </div>
+              </div>
+            </Link>)}
 
             {/* Secondary Dual Glass Showcase Cards */}
             {flagshipProjects.slice(1).map((project, idx) => {
@@ -475,37 +426,37 @@ function Index() {
                 "from-[#120a12] via-[#1c1022]/80 to-transparent",
               ];
               return (<Link to="/projects" key={project.title} className="lg:col-span-6 group relative rounded-[32px] overflow-hidden border border-white/15 bg-white/[0.03] backdrop-blur-2xl shadow-[0_24px_60px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.16)] transition-all duration-500 hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_32px_72px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.24)] p-4 sm:p-5 flex flex-col justify-between gap-5">
-                  <div className={`absolute inset-0 bg-gradient-to-t ${cardGradients[idx % cardGradients.length]} opacity-70 pointer-events-none`}/>
+                <div className={`absolute inset-0 bg-gradient-to-t ${cardGradients[idx % cardGradients.length]} opacity-70 pointer-events-none`} />
 
-                  {/* Inset Glass Media Frame with Floating Telemetry Bar */}
-                  <div className="relative z-10 h-56 sm:h-64 rounded-[24px] overflow-hidden border border-white/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"/>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35"/>
+                {/* Inset Glass Media Frame with Floating Telemetry Bar */}
+                <div className="relative z-10 h-56 sm:h-64 rounded-[24px] overflow-hidden border border-white/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35" />
 
-                    {/* Bottom Stack Pills Inside Media */}
-                    <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap gap-1.5">
-                      {project.tags.slice(0, 3).map((tag) => (<span key={tag} className="px-2.5 py-1 rounded-full bg-white/[0.12] border border-white/15 backdrop-blur-md text-[10px] font-medium text-zinc-100">
-                          {tag}
-                        </span>))}
-                    </div>
+                  {/* Bottom Stack Pills Inside Media */}
+                  <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap gap-1.5">
+                    {project.tags.slice(0, 3).map((tag) => (<span key={tag} className="px-2.5 py-1 rounded-full bg-white/[0.12] border border-white/15 backdrop-blur-md text-[10px] font-medium text-zinc-100">
+                      {tag}
+                    </span>))}
+                  </div>
+                </div>
+
+                {/* Frosted Bottom Copy & Circular Action Dock */}
+                <div className="relative z-10 px-2 pb-1 flex items-end justify-between gap-4">
+                  <div className="space-y-1.5">
+                    <h3 className="text-xl sm:text-[1.35rem] font-bold font-display text-white tracking-tight group-hover:text-[#f17b75] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-[13px] text-zinc-300/80 leading-relaxed line-clamp-2">
+                      {project.description}
+                    </p>
                   </div>
 
-                  {/* Frosted Bottom Copy & Circular Action Dock */}
-                  <div className="relative z-10 px-2 pb-1 flex items-end justify-between gap-4">
-                    <div className="space-y-1.5">
-                      <h3 className="text-xl sm:text-[1.35rem] font-bold font-display text-white tracking-tight group-hover:text-[#f17b75] transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-[13px] text-zinc-300/80 leading-relaxed line-clamp-2">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <span className="shrink-0 w-11 h-11 rounded-full bg-white text-[#08090d] flex items-center justify-center shadow-[0_8px_24px_rgba(255,255,255,0.16)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-                      <ArrowUpRight size={18}/>
-                    </span>
-                  </div>
-                </Link>);
+                  <span className="shrink-0 w-11 h-11 rounded-full bg-white text-[#08090d] flex items-center justify-center shadow-[0_8px_24px_rgba(255,255,255,0.16)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
+                    <ArrowUpRight size={18} />
+                  </span>
+                </div>
+              </Link>);
             })}
           </div>
           <div className="mt-12 text-center">
@@ -522,7 +473,7 @@ function Index() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[560px] h-[280px] bg-[#c73834]/12 rounded-full blur-[140px] pointer-events-none" />
         <div className="shell relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-         
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
               What is{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
@@ -572,70 +523,15 @@ function Index() {
         </div>
       </section>
 
-      {/* Our Core Services */}
-      <section className="py-14 bg-[#0a0c11] border-b border-white/10 relative overflow-hidden" id="core-services">
-        <div className="absolute bottom-0 right-1/4 w-[480px] h-[260px] bg-indigo-950/25 rounded-full blur-[130px] pointer-events-none" />
-        <div className="shell relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-           
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
-              Our Core{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
-                Services
-              </span>
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-300/85 leading-relaxed">
-              Practical, scalable engineering tailored to how your business operates today—and where you want it to grow tomorrow.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
-            {coreServicesList.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="glass-card rounded-[32px] p-7 sm:p-8 flex flex-col justify-between gap-6 transition-all duration-500 hover:-translate-y-1.5 group"
-                >
-                  <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/15 text-[#e65c58] flex items-center justify-center backdrop-blur-md group-hover:bg-[#c73834]/20 group-hover:border-[#c73834]/40 transition-colors">
-                      <Icon size={22} />
-                    </div>
-                    <h3 className="text-xl font-bold font-display text-white tracking-tight group-hover:text-[#f17b75] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-zinc-300/80 leading-relaxed">
-                      {item.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 pt-1">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="glass-badge px-3 py-1 rounded-full text-[11px] font-medium text-zinc-200">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    to={item.link}
-                    className="w-full py-3 px-5 rounded-full bg-white hover:bg-zinc-100 text-[#08090d] text-xs font-semibold flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(255,255,255,0.12)] transition-all duration-300 group-hover:scale-[1.01]"
-                  >
-                    <span>Explore Service</span>
-                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Our Core Services (3D Orbital Ecosystem) */}
+      <CoreServicesOrbit />
 
       {/* How We Work: Our Proven Process */}
       <section className="py-14 bg-[#08090d] border-b border-white/10 relative overflow-hidden" id="process">
         <div className="absolute top-1/2 left-0 w-[420px] h-[260px] bg-[#c73834]/10 rounded-full blur-[130px] pointer-events-none" />
         <div className="shell relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-           
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
               How We Work:{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
@@ -688,7 +584,7 @@ function Index() {
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[280px] bg-[#c73834]/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="shell relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-            
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
               Why Choose Mizaan for Your{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
@@ -728,7 +624,7 @@ function Index() {
       <section className="py-14 bg-[#08090d] border-b border-white/10 relative overflow-hidden" id="use-cases">
         <div className="shell relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-           
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
               Primary{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
@@ -783,7 +679,7 @@ function Index() {
         <div className="shell">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-             
+
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-tight">
                 Technology That Moves Your Business Forward.
               </h2>
@@ -821,11 +717,11 @@ function Index() {
             <div className="glass-card lg:col-span-6 relative rounded-3xl overflow-hidden shadow-2xl group">
               <img src={officeImage} alt="Mizaan Technologies office in Vaniyambadi" className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              
+
             </div>
 
             <div className="lg:col-span-6 space-y-6">
-             
+
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-tight leading-tight">
                 A Compact Team with a Serious Standard.
               </h2>

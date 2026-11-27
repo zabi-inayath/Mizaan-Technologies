@@ -1233,6 +1233,98 @@ footer {
   }
 }
 
+/* ━━━ 3D Orbital Services Showcase ━━━ */
+@keyframes orbit-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.orbit-ring-cw {
+  animation: orbit-cw 54s linear infinite;
+}
+
+.orbit-counter-cw {
+  animation: orbit-ccw 54s linear infinite;
+}
+
+.orbit-ring-ccw {
+  animation: orbit-ccw 38s linear infinite;
+}
+
+.orbit-counter-ccw {
+  animation: orbit-cw 38s linear infinite;
+}
+
+.orbit-stage:hover .orbit-ring-cw,
+.orbit-stage:hover .orbit-counter-cw,
+.orbit-stage:hover .orbit-ring-ccw,
+.orbit-stage:hover .orbit-counter-ccw {
+  animation-play-state: paused;
+}
+
+.orb-3d {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .28), rgba(255, 255, 255, .06) 44%, rgba(10, 12, 18, .9) 100%);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, .24);
+  box-shadow:
+    inset 0 2px 5px rgba(255, 255, 255, .32),
+    inset 0 -6px 12px rgba(0, 0, 0, .55),
+    0 16px 34px rgba(0, 0, 0, .55);
+}
+
+.orb-3d-active {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .42), rgba(230, 92, 88, .34) 48%, rgba(110, 20, 20, .92) 100%);
+  border-color: rgba(255, 255, 255, .48);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, .45),
+    inset 0 -6px 14px rgba(0, 0, 0, .5),
+    0 0 32px rgba(230, 92, 88, .55),
+    0 18px 38px rgba(0, 0, 0, .6);
+}
+
+.core-3d-hub {
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, .25), rgba(199, 56, 52, .24) 48%, rgba(10, 12, 18, .94) 100%);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, .26);
+  box-shadow:
+    inset 0 2px 8px rgba(255, 255, 255, .35),
+    inset 0 -10px 20px rgba(0, 0, 0, .65),
+    0 0 60px rgba(199, 56, 52, .32),
+    0 24px 50px rgba(0, 0, 0, .65);
+}
+
+.card-3d-surface {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 255, 255, .1), transparent 55%),
+    linear-gradient(155deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .015));
+  backdrop-filter: blur(28px) saturate(1.85);
+  -webkit-backdrop-filter: blur(28px) saturate(1.85);
+  border: 1px solid rgba(255, 255, 255, .16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .2),
+    inset 0 -12px 30px rgba(0, 0, 0, .35),
+    0 30px 70px rgba(0, 0, 0, .5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring-cw,
+  .orbit-counter-cw,
+  .orbit-ring-ccw,
+  .orbit-counter-ccw {
+    animation: none;
+  }
+}
+
 .planner-section {
   position: relative;
   isolation: isolate;

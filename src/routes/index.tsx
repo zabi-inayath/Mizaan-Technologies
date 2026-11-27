@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   ArrowUpRight,
-  Bot,
   Briefcase,
   CheckCircle2,
   Clock,
@@ -13,13 +12,9 @@ import {
   Lock,
   Rocket,
   ShieldCheck,
-  ShoppingBag,
-  Smartphone,
   Sparkles,
-  Store,
   Users,
   Zap,
-  Globe,
 } from "lucide-react";
 import officeImage from "../assets/mizaan-office.jpg";
 import webImage from "../assets/service-web.jpg";
@@ -32,6 +27,7 @@ import cloudImage from "../assets/service-cloud.jpg";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { RevampedHero } from "../components/home/RevampedHero";
+import { CoreServicesOrbit } from "../components/home/CoreServicesOrbit";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -219,51 +215,6 @@ const mizaanPillars = [
     title: "Designed to Scale With You",
     description:
       "Clean, maintainable architecture backed by direct senior engineers so your systems stay fast, secure, and adaptable as your business grows.",
-  },
-];
-
-const coreServicesList = [
-  {
-    icon: Globe,
-    title: "Website & Web App Engineering",
-    description:
-      "High-speed marketing websites, customer portals, and custom web applications engineered for clarity, SEO, and reliability.",
-    tags: ["Next.js & React", "Sub-Second Load"],
-  },
-  {
-    icon: Cpu,
-    title: "Custom Software & ERP Systems",
-    description:
-      "Tailored internal software, inventory engines, and ERP workflows built around the exact way your organization operates.",
-    tags: ["Bespoke ERP", "Role-Based Access"],
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description:
-      "Smooth iOS and Android applications with offline-first sync, real-time notifications, and intuitive mobile UX.",
-    tags: ["iOS & Android", "60 FPS Native Feel"],
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce Platforms",
-    description:
-      "Conversion-focused digital storefronts with seamless checkout, catalog control, payment gateways, and order tracking.",
-    tags: ["Payment Gateways", "Order Management"],
-  },
-  {
-    icon: Store,
-    title: "CRM & Retail POS Solutions",
-    description:
-      "Integrated point-of-sale billing, multi-branch inventory, and lead management systems that streamline daily operations.",
-    tags: ["Billing & Stock", "Lead Pipelines"],
-  },
-  {
-    icon: Bot,
-    title: "Super Intelligent Automation",
-    description:
-      "Practical AI workflows, smart document processing, and connected APIs that eliminate repetitive manual tasks.",
-    tags: ["AI Agents", "API Workflows"],
   },
 ];
 
@@ -716,69 +667,8 @@ function Index() {
           </div>
         </section>
 
-        {/* Our Core Services */}
-        <section className="py-24 bg-[#0a0c11] border-b border-white/10 relative overflow-hidden" id="core-services">
-          <div className="absolute bottom-0 right-1/4 w-[480px] h-[260px] bg-indigo-950/25 rounded-full blur-[130px] pointer-events-none" />
-          <div className="shell relative z-10">
-            <div className="max-w-3xl mx-auto text-center space-y-5 mb-16">
-              <div className="glass-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest text-zinc-200">
-                <Sparkles size={13} className="text-[#e65c58]" />
-                <span>Core Capabilities</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white tracking-[-0.03em] leading-[1.08]">
-                Our Core{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-[#e65c58]">
-                  Services
-                </span>
-              </h2>
-              <p className="text-base sm:text-lg text-zinc-300/85 leading-relaxed">
-                Practical, scalable engineering tailored to how your business operates today—and where you want it to grow tomorrow.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
-              {coreServicesList.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.title}
-                    className="glass-card rounded-[32px] p-7 sm:p-8 flex flex-col justify-between gap-6 transition-all duration-500 hover:-translate-y-1.5 group"
-                  >
-                    <div className="space-y-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/15 text-[#e65c58] flex items-center justify-center backdrop-blur-md group-hover:bg-[#c73834]/20 group-hover:border-[#c73834]/40 transition-colors">
-                        <Icon size={22} />
-                      </div>
-                      <h3 className="text-xl font-bold font-display text-white tracking-tight group-hover:text-[#f17b75] transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-zinc-300/80 leading-relaxed">
-                        {item.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="glass-badge px-3 py-1 rounded-full text-[11px] font-medium text-zinc-200"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Link
-                      to="/services"
-                      className="w-full py-3 px-5 rounded-full bg-white hover:bg-zinc-100 text-[#08090d] text-xs font-semibold flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(255,255,255,0.12)] transition-all duration-300 group-hover:scale-[1.01]"
-                    >
-                      <span>Explore Service</span>
-                      <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        {/* Our Core Services (3D Orbital Ecosystem) */}
+        <CoreServicesOrbit />
 
         {/* How We Work: Our Proven Process */}
         <section className="py-24 bg-[#08090d] border-b border-white/10 relative overflow-hidden" id="process">

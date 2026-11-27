@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import heroSpaceBg from "../../assets/hero-space-bg.jpg";
+import heroSpaceBg from "../../assets/MizaanHero.png";
 
 export function RevampedHero() {
   return (
